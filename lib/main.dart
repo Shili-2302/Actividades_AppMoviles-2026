@@ -26,37 +26,38 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const studentName = 'Escribe tu nombre';
-    const pendingTasks = 3;
-    const courseName = 'Desarrollo de aplicaciones móviles';
+    const String appName = 'TaskFlow';
+    const String studentName = 'Shirley';
+    const String motivationalMessage =
+        'Un paso a la vez: hoy es un buen día para avanzar.';
+    const int pendingTasks = 5;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('TaskFlow'),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: const Text(appName)),
       body: Padding(
         padding: const EdgeInsets.all(24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Icon(Icons.check_circle_outline, size: 56),
-            const SizedBox(height: 24),
             Text(
               '¡Hola, $studentName!',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            const SizedBox(height: 12),
-            Text('Bienvenido/a a $courseName.'),
-            const SizedBox(height: 32),
+            const SizedBox(height: 8),
+            const Text(motivationalMessage),
+            const SizedBox(height: 24),
             Card(
               child: Padding(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(16),
                 child: Row(
                   children: [
-                    const Icon(Icons.pending_actions),
-                    const SizedBox(width: 12),
-                    Text('Tareas pendientes: $pendingTasks'),
+                    const Icon(Icons.checklist_rounded, size: 40),
+                    const SizedBox(width: 16),
+                    const Expanded(child: Text('Tareas pendientes')),
+                    Text(
+                      '$pendingTasks',
+                      style: Theme.of(context).textTheme.headlineMedium,
+                    ),
                   ],
                 ),
               ),
