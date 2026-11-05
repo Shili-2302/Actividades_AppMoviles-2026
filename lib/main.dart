@@ -47,7 +47,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     const String appName = 'TaskFlow';
-    const String studentName = 'Shirley';
+    const String studentName = 'Shirley Cedeño';
     const String motivationalMessage =
         'Un paso a la vez: hoy es un buen día para avanzar.';
 
