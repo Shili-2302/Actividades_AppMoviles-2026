@@ -9,3 +9,7 @@ analyzer:
     - windows/**
     - macos/**
     - linux/**
+
+linter:
+  rules:
+    prefer_interpolation_to_compose_strings: false
